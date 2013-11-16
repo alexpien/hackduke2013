@@ -1,0 +1,2 @@
+class HoardController < ApplicationController
+end
