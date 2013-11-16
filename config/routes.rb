@@ -1,4 +1,12 @@
 Hackduke2013::Application.routes.draw do
+  match "sessions/destroy" => "sessions#destroy", via: [:get], as: 'signout'
+
+get "sessions/new", as: 'signin'
+
+  resources :sessions 
+
+  resources :users
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
   
