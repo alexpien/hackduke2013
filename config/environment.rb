@@ -2,4 +2,4 @@
 require File.expand_path('../application', __FILE__)
 
 # Initialize the rails application
-Pageshare::Application.initialize!
+Hackduke2013::Application.initialize!
