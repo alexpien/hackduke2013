@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base
-<<<<<<< HEAD
 	before_save { self.email = email.downcase }
 	has_secure_password  
 

@@ -1,0 +1,14 @@
+
+<h2>Profile</h2>
+
+<h3>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</h3>
+
+<h3>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</h3>
+
+<p> <%= link_to 'Edit', edit_user_path(@user), {:class=>"btn btn-large btn-link"}  %></p>
