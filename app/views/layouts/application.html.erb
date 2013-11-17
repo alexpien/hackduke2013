@@ -18,11 +18,23 @@
     <script src="../../assets/js/respond.min.js"></script>
   <![endif]-->
   <style>
+    .caption{
+      word-wrap: break-word;
+    }
+    .col-xs-3, .col-xs-12{
+      padding-bottom: 30px;
+    }
     .like{
       /*visibility: hidden;*/
-      position: absolute;
+      position: static;
+      float:right;
       top: 8px;
-      left: 22px;
+      left: calc(500px);
+    }
+    .trash{
+      position:absolute;
+      top: 8px;
+      left: 180px;
     }
     footer{
       position: static;
@@ -31,12 +43,6 @@
       text-align: center;
     }
   </style>
-  <script>
-    function like(button) {
-      if (this.value=="liked") value="not liked";
-      else value="liked";
-    }
-  </script>
 </head>
 <body>
   <!-- Static navbar -->
