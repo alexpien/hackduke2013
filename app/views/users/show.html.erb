@@ -10,7 +10,14 @@
   <strong>Email:</strong>
   <%= @user.email %>
 </h3>
-hihihi this is <%= @user.name %>'s hoard.
+
+Display list of stashes
+
+New stash button
+
+            <li><%= render partial:"post/post_form" %></li>
+
+
 <%=@posts.each do |post|%>
 <%=post.inspect%>
 <img src="http://free.pagepeeker.com/v2/thumbs.php?size=m&url=<%=post.url%>"/>

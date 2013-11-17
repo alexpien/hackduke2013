@@ -3,6 +3,9 @@
   <%= text_field_tag(:url, nil, {:placeholder=>"URL",:class=>"form-control"}) %>
 </div>
 <div class="form-group">
+	<%=collection_select(:stash, :id, current_user.stashes, :id, :name, :name, options ={:prompt => "Select a stash"}, :class =>"form-control")%>
+	</div>
+<div class="form-group">
   <%= submit_tag("Add",  :class=>"btn btn-success") %>
 </div>
 <% end %>

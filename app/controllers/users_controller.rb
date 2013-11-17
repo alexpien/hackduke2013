@@ -43,10 +43,15 @@ class UsersController < ApplicationController
   end
 
 def newpost
-  current_user.posts.create(:url=>params[:url], :user_id=>current_user.id, :score=>0)
+  stash=Stash.find(params[:stash_id])
+  stash.posts.create(:url=>params[:url])
         redirect_to :back
   end
 
+def newstash
+  current_user.stashes.create(:name=>params[:name], :user_id=>current_user.id, :score=>0)
+        redirect_to :back
+end
 
 def set_user
  @user = User.find(params[:id])
