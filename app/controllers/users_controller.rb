@@ -33,12 +33,10 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
-    respond_to do |format|
-      if @user.update(user_params)
-        redirect_to @user
-      else
-        render action: 'edit'
-      end
+    if @user.update(user_params)
+      redirect_to @user
+    else
+      render action: 'edit'
     end
   end
 
