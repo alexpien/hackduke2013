@@ -1,0 +1,144 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+/* entire container, keeps perspective */
+
+.flip-container {
+	perspective: 1000;
+}
+	/* flip the pane when hovered */
+	
+
+.flip-container, .front, .back {
+     
+	height: 200px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+        backface-visibility:hidden;
+-webkit-backface-visibility:hidden; /* Chrome and Safari */
+-moz-backface-visibility:hidden; /* Firefox */
+-ms-backface-visibility:hidden; /* Internet Explorer */
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+        width: 500px;
+}
+
+ul{
+    list-style:none;
+
+}
+
+.flipit{
+	transform: rotateY(180deg);
+}
+
+#edit{
+    border: 1px solid white;
+    cursor:pointer;
+    display:block;
+    width:40px;
+    text-align:center;
+}
+.hide{
+    display:none;
+
+}
+
+body {
+    background:url("http://www.rndo.eu/wp-content/uploads/2011/12/black-gradient.jpg"); 
+    color: white !important;
+    border-radius: 0px !important;
+    font-family:'Roboto Condensed', sans-serif !important;
+}
+
+.container{
+
+
+}
+.title-block{
+    padding:15px;
+    margin:10px;
+    width: 400px;
+    display:inline-block;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.navbar{
+    background-color: rgb(185, 9, 11) !important;
+    border-radius:0px !important;
+    color: white !important;
+}
+.thumbnail{
+    opacity:.7;
+    height: 400px !important;
+}
+
+.thumbnail:hover{
+    border:-2px solid rgb(185, 9, 11) !important;
+    opacity: 1;
+}
+a.navbar-brand{
+    font-size:24px !important;
+    color:white !important;
+    text-shadow: 0.1em 0.1em #333;
+}
+
+.comments{
+    width:400px;
+    float:left;
+    margin:50px;
+}
+
+h1{
+        font-family:'Roboto Condensed', sans-serif !important;
+
+}
+a{
+    color:white !important;
+}
+.postAuthor a{
+    color:black !important;
+
+}
+.stash-header{
+    display:block;
+
+}
+
+
+.float-right{
+    float:right;
+}
