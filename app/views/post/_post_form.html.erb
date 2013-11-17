@@ -1,5 +1,5 @@
-<%= form_for :post,  url: {action: "create",controller:"post"},html:{id:"new-post-form"} do |f| %>
-  Add to your hoard!
-  url:<%= f.text_field :url %>
-  <%= f.submit "add" %>
+<%= form_tag("/users/newpost", :method => "post") do %>
+  <%= label_tag(:url, "URL:") %>
+  <%= text_field_tag(:url) %>
+  <%= submit_tag("Add") %>
 <% end %>
