@@ -8,12 +8,14 @@
   <strong>Email:</strong>
   <%= @user.email %>
 </h3>
+<% if current_user %>
 <% if current_user.name==@user.name %>
 
 <h2>
   Your Stashes
   <%= render partial:"stash/stash_form" %>
 </h2>
+<% end %>
 <% end %> 
 <% if @stashes.length==0%>
   <h4>There are no stashes! Add some on the right.</h4>

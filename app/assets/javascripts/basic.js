@@ -1,5 +1,41 @@
 
 $( document ).ready(function(){
+    $(".thumbnail").mouseenter(function(){
+        stash = $(this).attr("id").split("-")[1];
+        $(".buttons-"+stash).removeClass("hide");
+    }).mouseleave(function(){
+        stash = $(this).attr("id").split("-")[1];
+        $(".buttons-"+stash).addClass("hide");
+        });
+
+
+
+    $(".delete").click(function(){
+        var stash = $(this).attr("id").split("-")[1];
+        $.ajax({
+            type: "DELETE",
+            url: "/stash/"+stash,
+            success: function(response){
+                $("#stash-col-"+stash).remove();
+            }
+            });
+        });
+    
+    
+    $(".delete-post").click(function(){
+        var post = $(this).attr("id").split("-")[1];
+        $.ajax({
+            type: "DELETE",
+            url: "/post/"+post,
+            success: function(response){
+                $("#post-col-"+post).remove();
+            }
+            });
+        });
+    
+
+
+
 
     $.ajaxSetup({
         headers: {
@@ -8,11 +44,10 @@ $( document ).ready(function(){
     });
 
     $(".like").click(function(){
-       
+        
         var stash = $(this).attr("id").split("-")[1];
         $("#icon-"+stash).toggleClass("glyphicon-heart-empty");
         $("#icon-"+stash).toggleClass("glyphicon-heart");
-        console.log(stash);
         $.ajax({
             type: "POST",
             url: "/likes/stash",
@@ -21,7 +56,7 @@ $( document ).ready(function(){
                 console.log(response["score"]);
                 
                 $("#num-likes-"+stash).text(response["score"]);
-}
+            }
         });
         
     });

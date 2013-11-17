@@ -1,15 +1,22 @@
 <h1><%=@stash.name%></h1>by <%=link_to User.find(@stash.user_id).name, user_path(@stash.user_id)%>
 <div style="margin-left:15px;">
   <% Post.where(stash_id: @stash.id).each do |post|%>
-  <div class="col-xs-3" style="width:240px">
-	  <div class="thumbnail">
-	    <a href="<%= post.url%>">
-		  <img src="http://api.webthumbnail.org/?width=200&format=png&url=<%=post.url%>"/>
-	    </a>
-	    <div class="caption" style="word-wrap: break-word;;">
-	      <h4 style="text-wrap:unrestricted;"><%= post.url %>  </h4>
-	    </div>
-	  </div>
+  <div id="post-col-<%=post.id%>"class="col-xs-3" style="width:240px">
+    <div id ="thumb-<%=post.id%>-post" class="thumbnail">
+      <a href="<%= post.url%>">
+	<img src="http://api.webthumbnail.org/?width=200&format=png&url=<%=post.url%>"/>
+      </a>
+      <div class="caption" style="word-wrap: break-word;;">
+	<h4 style="text-wrap:unrestricted;"><%= post.url %>  </h4>
+      </div>
+    <% if current_user %>
+    <div id="delete-<%=post.id%>-post" class="btn delete-post buttons-<%=post.id%>
+                                          hide btn-default btn-sm " style="float:right">
+      <span  class="glyphicon glyphicon-trash">
+        
+    </div>
+    <% end %>
+    </div>
   </div>
   <% end %>
 </div>
