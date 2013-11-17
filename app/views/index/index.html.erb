@@ -8,7 +8,7 @@
 		<p>You have no stashes!</p>
 	<% else%>
 	  <% @stashes.each do |stash| %>
-	    <div class="col-sm-3 post">
+	    <div class="col-xs-3">
 	      <div class="thumbnail">
 	        <a href="/stash/<%= stash.id%>">
 				<img src="http://free.pagepeeker.com/v2/thumbs.php?size=m&url=<%=stash.posts.first.url%>"/>
