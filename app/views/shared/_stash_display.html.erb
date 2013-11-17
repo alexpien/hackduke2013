@@ -6,7 +6,7 @@
       <% if stash.posts.first%>
       <img src="http://api.webthumbnail.org/?width=200&format=png&url=<%=stash.posts.first.url%>"/>
       <% else %>
-      <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQSqrHNVXtTV-lls5bPViN_Y5Y6_2ugnwwJcD0Dg5sueXbLQ9ZuuA"/>
+      <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQSqrHNVXtTV-lls5bPViN_Y5Y6_2ugnwwJcD0Dg5sueXbLQ9ZuuA" width=200/>
       <% end %>            </a>
     <div id="like-<%=stash.id%>" class="btn btn-default btn-lg like buttons-<%=stash.id%> hide"  >
       <% if current_user%>
