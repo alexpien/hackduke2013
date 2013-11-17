@@ -2,7 +2,7 @@
 <div class="title-block"><h1><%=@stash.name%></h1> <span style="margin-left:5em">by <%=link_to User.find(@stash.user_id).name, user_path(@stash.user_id)%></span></div>
 
 <p class="lead text-muted"><%=@stash.comment%></p>
-<%= render partial:"stash/stash_update" %>
+<%= render partial:"stashes/stash_update" %>
 
 <div style="margin-left:15px;">
   <% Post.where(stash_id: @stash.id).each do |post|%>
