@@ -11,6 +11,25 @@
   <%= @user.email %>
 </h3>
 
+<div class="col-md-4">
+  <div class="thumbnail">
+   
+
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+      <div class="flipper">
+	<div class="front">
+           <img class="postimage" src="http://www.clker.com/cliparts/H/D/e/R/O/P/green-plus-sign-md.png">
+	  <!-- front content -->
+	</div>
+	<div class="back">
+	  <!-- back content -->
+          hellooo
+	</div>
+      </div>
+    </div>
+
+  </div>
+</div>
 Display list of stashes
 
 New stash button
@@ -19,7 +38,6 @@ New stash button
 
 
 <%=@posts.each do |post|%>
-<%=post.inspect%>
 <a href= "<%=post.url%>"/>
 <img src="http://free.pagepeeker.com/v2/thumbs.php?size=m&url=<%=post.url%>"/>
 <%end%>
