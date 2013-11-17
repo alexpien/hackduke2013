@@ -1,0 +1,5 @@
+<%= form_for :post,  url: {action: "create",controller:"post"} do |f| %>
+  Add to your hoard!
+  url:<%= f.text_field :url %>
+  <%= f.submit "add" %>
+<% end %>
