@@ -18,9 +18,11 @@
   <![endif]-->
   <style>
     .post{
-      height: 100px;
+      text-align: center
     }
     .articleimage{
+      width: 300px;
+      height: 300px;
     }
     .articletitle{
 
@@ -32,9 +34,10 @@
       text-align: center;
     }
   </style>
+
 </head>
 <body>
-<!-- Static navbar -->
+  <!-- Static navbar -->
   <div class="navbar navbar-default">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -71,10 +74,10 @@
     <%= yield %>
   </div><!--/container-->
 
-    <footer>
-      <hr>
-      <p>&copy; HackDuke 2013</p>
-    </footer>
+  <footer>
+    <hr>
+    <p>&copy; HackDuke 2013</p>
+  </footer>
   <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 </body>
