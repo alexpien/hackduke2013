@@ -3,7 +3,7 @@
           <div class="thumbnail">
             <a href="/stash/<%= stash.id%>">
             <% if stash.posts.first%>
-            <img src="http://free.pagepeeker.com/v2/thumbs.php?size=m&url=<%=stash.posts.first.url%>"/>
+            <img src="http://api.webthumbnail.org/?width=200&format=png&url=<%=stash.posts.first.url%>"/>
             <% else %>
             <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQSqrHNVXtTV-lls5bPViN_Y5Y6_2ugnwwJcD0Dg5sueXbLQ9ZuuA"/>
             <% end %>            </a>
