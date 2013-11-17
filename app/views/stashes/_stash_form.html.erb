@@ -1,8 +1,8 @@
-<%= form_for(@stash, :class=>"navbar-form") do |f|%>
-<div class="form-group">
+<div class="row">
+<%= form_for(@stash, :class=>"form-inline") do |f|%>
+<div class="col-xs-3">
   <%= f.text_field(:name, {:placeholder=>"Add a Stash",:class=>"form-control"}) %>
 </div>
-<div class="form-group">
   <%= f.submit("Add", :class=>"btn btn-success") %>
-</div>
 <% end %>
+</div>
