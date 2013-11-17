@@ -35,6 +35,7 @@
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
+        width: 500px;
 }
 
 ul{

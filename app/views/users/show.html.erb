@@ -13,16 +13,19 @@
   <strong>score:</strong>
   <%= @user.stashes.sum(:score) %>
 </h3>
-<br>
-<br>
-<br>
+
 
 <% if current_user %>
 <% if current_user.name==@user.name %>
-<h2>
-    <%= render partial:"stash/stash_form" %>
+<div class="title-block">
+<h1>
   Your Stashes
-</h2>
+</h1>
+   
+</div>
+<div class="float-right">
+ <%= render partial:"stash/stash_form" %>
+</div>
 <% end %>
 <% end %> 
 <% if @stashes.length==0%>

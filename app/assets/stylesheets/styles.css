@@ -44,7 +44,8 @@ a.navbar-brand{
 
 .comments{
     width:400px;
-    display:inline-block;
+    float:left;
+    margin:50px;
 }
 
 h1{
@@ -64,3 +65,6 @@ a{
 }
 
 
+.float-right{
+    float:right;
+}

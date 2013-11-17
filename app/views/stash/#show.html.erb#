@@ -14,9 +14,12 @@
   <div class="flipper">
     <div class="front">
       <!-- front content -->
-      <div class="title-block"><h1><%=@stash.name%></h1> <span style="margin-left:5em">by
+      <div class="title-block">
+        <h1><%=@stash.name%></h1> 
+        <span style="margin-left:5em">by
           <%=link_to User.find(@stash.user_id).name,
-                     user_path(@stash.user_id)%></span></div>
+                     user_path(@stash.user_id)%></span>
+      </div>
       <div class="comments">
         <%=@stash.comment%>
       </div>
