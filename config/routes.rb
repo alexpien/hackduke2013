@@ -4,9 +4,11 @@ Hackduke2013::Application.routes.draw do
 get "sessions/new", as: 'signin'
 
 post "users/newpost"
+post "users/newstash"
 
   resources :sessions 
   resources :users
+  resources :stash
  
   # The priority is based upon order of creation:
   # first created -> highest priority.
