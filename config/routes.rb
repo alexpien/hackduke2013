@@ -11,7 +11,7 @@ post "likes/stash"
   resources :sessions 
   resources :users
   resources :stash
- 
+  resources :post
   # The priority is based upon order of creation:
   # first created -> highest priority.
   
