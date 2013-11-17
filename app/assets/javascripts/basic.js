@@ -11,8 +11,12 @@ $( document ).ready(function(){
         $.ajax({
             type: "POST",
             url: "/likes/stash",
-            data: {"stash_id":stash}
+            data: {"stash_id":stash},
+            success: function(response){
+                $("#num-likes"+stash).text(response);
+}
         });
+        
     });
 
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131117052629) do
+ActiveRecord::Schema.define(version: 20131117080217) do
 
   create_table "posts", force: true do |t|
     t.integer  "user_id"
@@ -21,6 +21,13 @@ ActiveRecord::Schema.define(version: 20131117052629) do
     t.datetime "updated_at"
     t.string   "image_path"
     t.integer  "stash_id"
+  end
+
+  create_table "stash_likes", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "stash_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "stashes", force: true do |t|
