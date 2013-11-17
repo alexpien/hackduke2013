@@ -44,12 +44,28 @@ class UsersController < ApplicationController
 
 def newpost
   stash=Stash.find(params[:stash][:id])
-  stash.posts.create(:url=>params[:url])
-        redirect_to :back
+  u = URI.parse(params[:url])
+
+  if(!u.scheme)
+    # prepend http:// and try again
+    params[:url].prepend("http://")
+      u = URI.parse(params[:url])
+  end
+if(%w{http https}.include?(u.scheme))
+      stash.posts.create(:url=>u.to_s)
+      flash[:notice]="Post added to stash!"
+      redirect_to :back
+else
+      flash[:notice]="Error reading URL!"
+      redirect_to :back
+end
+
   end
 
 def newstash
   current_user.stashes.create(:name=>params[:name], :user_id=>current_user.id, :score=>0)
+        flash[:notice]="Stash created!"
+
         redirect_to :back
 end
 
