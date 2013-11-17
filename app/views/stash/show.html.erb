@@ -1,4 +1,9 @@
+
 <div class="title-block"><h1><%=@stash.name%></h1> <span style="margin-left:5em">by <%=link_to User.find(@stash.user_id).name, user_path(@stash.user_id)%></span></div>
+
+<p class="lead text-muted"><%=@stash.comment%></p>
+<%= render partial:"stash/stash_update" %>
+
 <div style="margin-left:15px;">
   <% Post.where(stash_id: @stash.id).each do |post|%>
   <div id="post-col-<%=post.id%>"class="col-xs-3" style="width:240px;">
@@ -12,9 +17,7 @@
         <span  class="glyphicon glyphicon-trash"></span>
     </div>
     <% end %>
-     
             
-
       <div class="caption" style="word-wrap: break-word;;">
 	<h4 style="text-wrap:unrestricted;"><%= post.title %>  </h4>
       </div>
