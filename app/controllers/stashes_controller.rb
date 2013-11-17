@@ -1,7 +1,17 @@
-class StashController < ApplicationController
+class StashesController < ApplicationController
   def show
     @stash = Stash.find(params[:id])    
   end
+
+def create
+  @stash=current_user.stashes.create(:name=>params[:stash][:name], :user_id=>current_user.id, :score=>0, :comment=>"Edit to add a description.")
+      if @stash.save
+        flash[:notice]="Stash created!"
+      else
+        flash[:notice]="Error creating stash"
+      end
+        redirect_to :back
+end
 
 def newpost
   require 'mechanize'

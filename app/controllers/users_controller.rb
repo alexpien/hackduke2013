@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @stashes=Stash.where(user_id: @user.id).reverse_order
+    @stash=Stash.new
   end
 
   # GET /users/new
@@ -24,16 +25,6 @@ class UsersController < ApplicationController
         render action: 'new'
       end
   end
-
-def newstash
-  stash=current_user.stashes.create(:name=>params[:name], :user_id=>current_user.id, :score=>0)
-         if stash.save
-        flash[:notice]="Stash created!"
-      else
-          flash[:notice]="Error creating stash"
-      end
-        redirect_to :back
-end
 
   private
     def set_user
