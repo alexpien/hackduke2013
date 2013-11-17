@@ -10,9 +10,9 @@ post "stashes/newpost"
   resources :users
   resources :stashes
   resources :post
-
+  
   get 'users/:username', to: 'users#show'
-
+  get 'recent', to: 'index#recent'
   # The priority is based upon order of creation:
   # first created -> highest priority.
   
