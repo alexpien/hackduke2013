@@ -10,5 +10,8 @@
   <strong>Email:</strong>
   <%= @user.email %>
 </h3>
+hihihi this is <%= @user %>'s hoard.
+<%= render partial:"post/post_form" %>
+<%=@posts.inspect%>
 
 <p> <%= link_to 'Edit', edit_user_path(@user), {:class=>"btn btn-large btn-link"}  %></p>

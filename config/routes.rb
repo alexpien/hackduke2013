@@ -3,13 +3,11 @@ Hackduke2013::Application.routes.draw do
 
 get "sessions/new", as: 'signin'
 
-post "users/addpost"
+post "users/newpost"
 
   resources :sessions 
   resources :users
  
-  get 'hoard/:user' => 'hoard#index'  
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
   
