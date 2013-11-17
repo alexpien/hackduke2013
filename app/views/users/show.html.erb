@@ -18,18 +18,21 @@
 <% if current_user %>
 <% if current_user.name==@user.name %>
 
-<div class="title-block">
-<h1>
 
+<div class="title-block">
+<div style="float:left;">
+<h1 >
   Your Stashes
 </h1>
-   
 </div>
-<div class="float-right">
+</div>
+<div style="float:right;">
  <%= render partial:"stashes/stash_form" %>
 </div>
 <% end %>
 <% end %> 
+
+<hr>
 <% if @stashes.length==0%>
   <h4>There are no stashes!</h4>
 <% else%>
