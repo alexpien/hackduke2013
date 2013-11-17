@@ -5,10 +5,14 @@ get "sessions/new", as: 'signin'
 
 post "likes/stash"
 post "stashes/newpost"
+
   resources :sessions 
   resources :users
   resources :stashes
   resources :post
+
+  get 'users/:username', to: 'users#show'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
   
