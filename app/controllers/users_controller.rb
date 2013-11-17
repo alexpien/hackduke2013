@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  require 'unirest'
   before_action :set_user, only: [:show]
   before_action :signed_in, only: [:edit, :update]
   before_action :correct_user, only: [:edit, :update]
