@@ -26,6 +26,7 @@ class UsersController < ApplicationController
   end
 
 def newpost
+  require 'mechanize'
   stash=Stash.find(params[:stash][:id])
   u = URI.parse(params[:url])
 
@@ -35,7 +36,8 @@ def newpost
       u = URI.parse(params[:url])
   end
 if(%w{http https}.include?(u.scheme))
-      stash.posts.create(:url=>u.to_s)
+  title=Mechanize.new.get(u.to_s).title
+      stash.posts.create(:url=>u.to_s, :title=>title)
       flash[:notice]="Post added to stash!"
       redirect_to :back
 else

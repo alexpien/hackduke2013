@@ -16,6 +16,7 @@ $( document ).ready(function(){
             type: "DELETE",
             url: "/stash/"+stash,
             success: function(response){
+                console.log(response["deleted"]);
                 $("#stash-col-"+stash).remove();
             }
             });

@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 gem 'binding_of_caller'
 
+gem 'mechanize'
 # Use sqlite3 as the database for Active Record
 
 group :development do
