@@ -33,10 +33,6 @@ $( document ).ready(function(){
             }
             });
         });
-    
-
-
-
 
     $.ajaxSetup({
         headers: {
@@ -62,8 +58,9 @@ $( document ).ready(function(){
         
     });
 
-
-
+    $('.editButton').click(function() {
+        $('.stashCommentEdit').show();
+    });
 
 });
 
