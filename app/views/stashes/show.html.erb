@@ -1,13 +1,12 @@
-<div class="stash-header ">
+<div class="stash-header">
   
 <% if current_user %>
-
 <% if @stash.user_id == current_user.id %>
-
 <div id="edit"> edit </div>
+<% end %>
+<% end %>
 </div>
-<% end %>
-<% end %>
+
 
     <div id="shown">
       <!-- front content -->
@@ -22,12 +21,7 @@
     <div id="editmsg" style="display:none">
       <!-- back content -->
         <%= render partial:"stashes/stash_update" %>
-
 </div>
-
-
-
-
 
 <div style="margin-left:15px;">
   <% Post.where(stash_id: @stash.id).each do |post|%>

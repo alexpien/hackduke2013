@@ -1,1 +1,6 @@
-<%=@results.inspect%>
+  <h4>Results for: <%=params[:search]%></h4>
+<% if @stashes.length==0%>
+  <h4>There are no stashes!</h4>
+<% else%>
+  <%= render partial:"shared/stash_display", locals:{stashes: @stashes} %>
+<% end%>

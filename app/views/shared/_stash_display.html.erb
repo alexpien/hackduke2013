@@ -24,6 +24,7 @@
     <div class="caption">
         <h3 class="postTitle"> <%= stash.name %> </h3>
       <p class="postAuthor"> by <%= link_to User.find(stash.user_id).name, user_path(stash.user_id)%></p>
+      <p class="postAuthor"><%="Links: "+stash.posts.length.to_s%></p>
     </div>
 
     </div>

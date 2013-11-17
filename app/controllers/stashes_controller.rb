@@ -4,7 +4,7 @@ class StashesController < ApplicationController
   end
 
   def search
-  @results = Stash.search(params[:search])
+  @stashes = Stash.search(params[:search])
 end
 
 def create

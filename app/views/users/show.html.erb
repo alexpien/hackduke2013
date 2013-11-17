@@ -31,9 +31,7 @@
 <% end %>
 <% end %> 
 <% if @stashes.length==0%>
-  <h4>There are no stashes! Add some on the right.</h4>
+  <h4>There are no stashes!</h4>
 <% else%>
-  <br>
-  <br>
   <%= render partial:"shared/stash_display", locals:{stashes: @stashes} %>
 <% end%>
