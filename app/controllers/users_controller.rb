@@ -53,11 +53,6 @@ def newstash
         redirect_to :back
 end
 
-    def correct_user
-      @user = User.find(params[:id])
-      redirect_to(signin_url, notice:'Incorrect User') unless current_user==@user
-    end
-
   private
 
     # Never trust parameters from the scary internet, only allow the white list through.
