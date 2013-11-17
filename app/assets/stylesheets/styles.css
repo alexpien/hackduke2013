@@ -2,3 +2,13 @@
     display:none;
 
 }
+
+body {
+    background: url("http://hackduke.org/css/../img/duke02.jpg") no-repeat fixed center 55% / cover transparent;
+}
+
+.container{
+
+    background-color:white;
+
+}
