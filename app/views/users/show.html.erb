@@ -1,16 +1,24 @@
 
 <h2>Profile</h2>
+<div style="margin-left:20px;">
+  <h3>
+    <strong>Name:</strong>
+    <%= @user.name %>
+  </h3>
+
+  <h3>
+    <strong>Email:</strong>
+    <%= @user.email %>
+  </h3>
+</div>
+
+<p> <%= link_to 'Edit', edit_user_path(@user), {:class=>"btn btn-large btn-link"}  %></p>
 
 <h3>
-  <strong>Name:</strong>
-  <%= @user.name %>
+  <strong>Your Stashes</strong>
 </h3>
 
-<h3>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</h3>
-
+<<<<<<< HEAD
 <p> <%= link_to 'Edit', edit_user_path(@user), {:class=>"btn btn-large btn-link"}  %></p>
 
 <div class="row-fluid">
@@ -33,4 +41,22 @@
 
 </div>
 
+=======
+<div class="row" style="margin-left:15px;"> <!-- YourStashes -->
+  <% @user.stashes.each do |stash| %>
+    <div class="col-sm-4 post">
+      <div class="thumbnail">
+        <a href="/stash/<%= stash.id%>">
+         <img src="http://free.pagepeeker.com/v2/thumbs.php?size=m&url=<%=stash.first.url%>"/>
+        </a>
+        <div class="caption">
+          <h3 class="postTitle"> <%= stash.name %> </h3>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+<div style="float:right;">
+>>>>>>> eb00b07fd95aecef6c575da87a9262803b224d4a
   <%= render partial:"stash/stash_form" %>
+</div>
