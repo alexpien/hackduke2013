@@ -7,6 +7,11 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find_by_id(session[:user_id]) if session[:user_id]  
   end
 
+    def correct_user
+      @user = User.find(params[:id])
+      redirect_to(signin_url, notice:'Incorrect User') unless current_user==@user
+    end
+
 def signed_in
 	if current_user.nil?
 		store_location
@@ -23,7 +28,7 @@ end
     session[:return_to] = request.url if request.get?
   end
 
-  helper_method :current_user, :signed_in
+  helper_method :current_user, :correct_user, :signed_in
 
 
 end

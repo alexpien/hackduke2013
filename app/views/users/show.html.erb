@@ -1,22 +1,22 @@
-
-<h2>Profile</h2>
-<div style="margin-left:px;">
-  <h3>
-    <strong>Name:</strong>
-    <%= @user.name %>
-  </h3>
-
-  <h3>
-    <strong>Email:</strong>
-    <%= @user.email %>
-  </h3>
-</div>
-
+<h2>Profile </h2>
 <p> <%= link_to 'Edit', edit_user_path(@user), {:class=>"btn btn-large btn-link"}  %></p>
+<h3>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</h3>
 
 <h3>
-  <strong>Your Stashes</strong>
-  <%= render partial:"stash/stash_form" %>
+  <strong>Email:</strong>
+  <%= @user.email %>
 </h3>
-<br>
+
+<h2>
+  Your Stashes
+  <%= render partial:"stash/stash_form" %>
+</h2>
+<% if @stashes.length==0%>
+  <h4>There are no stashes! Add some on the right.</h4>
+<% else%>
+  <br>
   <%= render partial:"shared/stash_display", locals:{stashes: @stashes} %>
+<% end%>

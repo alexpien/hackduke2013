@@ -3,7 +3,7 @@
   <% Post.where(stash_id: @stash.id).each do |post|%>
   <div class="col-xs-3" style="width:240px">
 	  <div class="thumbnail">
-	    <a href="= post.url">
+	    <a href="<%= post.url%>">
 		  <img src="http://free.pagepeeker.com/v2/thumbs.php?size=m&url=<%=post.url%>"/>
 	    </a>
 	    <div class="caption">
