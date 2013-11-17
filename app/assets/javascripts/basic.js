@@ -1,12 +1,26 @@
-$('#new_post_form').submit(function() {  
-    var valuesToSubmit = $(this).serialize();
-    $.ajax({
-        url: "post/create", //sumbits it to the given url of the form
-        data: valuesToSubmit,
-        dataType: "JSON" // you want a difference between normal and ajax-calls, and json is standard
-    }).success(function(json){
-        //act on result.
-       alert("success"
+
+$( document ).ready(function(){
+
+    
+
+    $(".like").click(function(){
+        $(this).toggleClass("is-liked");
+        var stash = $(this).attr("id").split("-")[1];
+        
+        console.log(stash);
+        $.ajax({
+            type: "POST",
+            url: "/likes/stash",
+            data: {"stash_id":stash},
+            success: function(response){
+                $("#num-likes"+stash).text(response);
+}
+        });
+        
     });
-    return false; // prevents normal behaviour
+
+
+
+
 });
+
