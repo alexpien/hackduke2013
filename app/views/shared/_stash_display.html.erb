@@ -1,7 +1,7 @@
 <% stashes.each do |stash| %>
   <div id="stash-col-<%=stash.id%>"class="col-xs-3" style="width:270px;">
     <div id ="thumb-<%=stash.id%>" class="thumbnail">
-      <a href="/stash/<%= stash.id%>">
+      <a href="/stashes/<%= stash.id%>">
         <% if stash.posts.first%>
         <img src="http://api.webthumbnail.org/?width=230&format=png&url=<%=stash.posts.first.url%>"/>
         <% else %>

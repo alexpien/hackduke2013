@@ -22,7 +22,7 @@ $( document ).ready(function(){
         var stash = $(this).attr("id").split("-")[1];
         $.ajax({
             type: "DELETE",
-            url: "/stash/"+stash,
+            url: "/stashes/"+stash,
             success: function(response){
                 console.log(response["deleted"]);
                 $("#stash-col-"+stash).remove();

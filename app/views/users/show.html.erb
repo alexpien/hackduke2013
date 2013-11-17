@@ -17,14 +17,16 @@
 
 <% if current_user %>
 <% if current_user.name==@user.name %>
+
 <div class="title-block">
 <h1>
+
   Your Stashes
 </h1>
    
 </div>
 <div class="float-right">
- <%= render partial:"stash/stash_form" %>
+ <%= render partial:"stashes/stash_form" %>
 </div>
 <% end %>
 <% end %> 
