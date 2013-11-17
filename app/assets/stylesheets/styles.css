@@ -30,6 +30,7 @@ body {
 }
 .thumbnail{
     opacity:.7;
+    height: 400px !important;
 }
 
 .thumbnail:hover{
