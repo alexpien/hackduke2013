@@ -1,9 +1,41 @@
+<div class="stash-header ">
 
-<div class="title-block"><h1><%=@stash.name%></h1> <span style="margin-left:5em">by <%=link_to User.find(@stash.user_id).name, user_path(@stash.user_id)%></span></div>
 
-<p class="lead text-muted"><%=@stash.comment%></p>
-<%= render partial:"stash/stash_update" %>
 
+<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+	<div class="flipper">
+		<div class="front">
+			<!-- front content -->
+  <div class="title-block"><h1><%=@stash.name%></h1> <span style="margin-left:5em">by
+  <%=link_to User.find(@stash.user_id).name,
+  user_path(@stash.user_id)%></span></div>
+  <div class="comments">
+    <%=@stash.comment%>
+  </div>
+
+		</div>
+		<div class="back">
+			<!-- back content -->
+
+  <div class = "comments">
+    <%= render partial:"stash/stash_update" %>
+  </div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<% if current_user %>
+
+<% if @stash.user_id == current_user.id %>
+
+<div style="float:right;" id="edit"> edit </div>
+</div>
+<% end %>
+<% end %>
 <div style="margin-left:15px;">
   <% Post.where(stash_id: @stash.id).each do |post|%>
   <div id="post-col-<%=post.id%>"class="col-xs-3" style="width:240px;">

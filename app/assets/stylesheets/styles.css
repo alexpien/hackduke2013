@@ -17,7 +17,10 @@ body {
 .title-block{
     padding:15px;
     margin:10px;
-
+    width: 400px;
+    display:inline-block;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
 }
 
 .navbar{
@@ -39,6 +42,11 @@ a.navbar-brand{
     text-shadow: 0.1em 0.1em #333;
 }
 
+.comments{
+    width:400px;
+    display:inline-block;
+}
+
 h1{
         font-family:'Roboto Condensed', sans-serif !important;
 
@@ -50,3 +58,9 @@ a{
     color:black !important;
 
 }
+.stash-header{
+    display:block;
+
+}
+
+

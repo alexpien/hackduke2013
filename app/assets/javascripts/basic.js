@@ -9,7 +9,15 @@ $( document ).ready(function(){
         });
 
 
+    $("#edit").click(function(){
+        console.log("hi");
+        $(".flipper").toggleClass("flipit");
+        $(".flip-container").toggleClass("flipper");
+        $(".flipper").toggleClass("flipit");
+        
+  
 
+});
     $(".delete").click(function(){
         var stash = $(this).attr("id").split("-")[1];
         $.ajax({
