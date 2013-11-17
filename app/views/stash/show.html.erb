@@ -1,4 +1,16 @@
 <div class="title-block"><h1><%=@stash.name%></h1> <span style="margin-left:5em">by <%=link_to User.find(@stash.user_id).name, user_path(@stash.user_id)%></span></div>
+
+<h3 class="stashComment">    
+  <% if shash.comment.nil?%>
+    <%= @stash.comment%>
+    <% if current_user %>
+      <p> <%= link_to 'Edit comment', edit_comment(@stash), {:class=>"btn btn-large btn-link">} %></p>
+    <%end%>
+  <%elsif current_user %>
+    <!-- form --> 
+  <%end%>
+<h3>
+
 <div style="margin-left:15px;">
   <% Post.where(stash_id: @stash.id).each do |post|%>
   <div id="post-col-<%=post.id%>"class="col-xs-3" style="width:240px;">

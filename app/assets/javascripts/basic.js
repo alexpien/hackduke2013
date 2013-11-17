@@ -33,10 +33,6 @@ $( document ).ready(function(){
             }
             });
         });
-    
-
-
-
 
     $.ajaxSetup({
         headers: {
@@ -61,9 +57,6 @@ $( document ).ready(function(){
         });
         
     });
-
-
-
 
 });
 
