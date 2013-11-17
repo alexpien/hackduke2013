@@ -12,7 +12,7 @@
             </button>
             <div class="caption">
               <h3 class="postTitle"> <%= stash.name %> </h3>
-              <p class="postAuthor"> <%= User.find(stash.user_id).name %> </p>
+              <p class="postAuthor"> <%= link_to User.find(stash.user_id).name, user_path(stash.user_id)%></p>
             </div>
           </div>
         </div>
