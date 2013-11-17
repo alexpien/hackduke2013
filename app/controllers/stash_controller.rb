@@ -1,5 +1,5 @@
 class StashController < ApplicationController
-def show
-	@posts=Post.where(stash_id: params[:id])
-end
+  def show
+    @stash = Stash.find(params[:id])    
+  end
 end
