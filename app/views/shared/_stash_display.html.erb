@@ -1,9 +1,12 @@
-      <% @stashes.each do |stash| %>
+      <% stashes.each do |stash| %>
         <div class="col-xs-3">
           <div class="thumbnail">
             <a href="/stash/<%= stash.id%>">
-                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQSqrHNVXtTV-lls5bPViN_Y5Y6_2ugnwwJcD0Dg5sueXbLQ9ZuuA"/>
-            </a>
+            <% if stash.posts.first%>
+            <img src="http://free.pagepeeker.com/v2/thumbs.php?size=m&url=<%=stash.posts.first.url%>"/>
+            <% else %>
+            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQSqrHNVXtTV-lls5bPViN_Y5Y6_2ugnwwJcD0Dg5sueXbLQ9ZuuA"/>
+            <% end %>            </a>
             <button type="button" class="btn btn-default btn-lg like" value="not liked" onClick="like(this)">
                 <span class="glyphicon glyphicon-heart-empty"></span>
             </button>

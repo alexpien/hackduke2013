@@ -1,6 +1,6 @@
 <br><br>
 <div class="pageTitle">
-	<h1>Popular Stashes</h1>
+  <h1>Popular Stashes</h1>
 </div>
 
 <div class="row" style="margin-left:15px;"> <!-- Your Stashes -->
@@ -8,5 +8,6 @@
 		<p>There are no stashes.</p>
 	<% else%>
   <%= render partial:"shared/stash_display", locals:{stashes: @stashes} %>
+
   <% end %>
 </div>
