@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show]
-  before_action :signed_in, only: [:edit, :update]
+  before_action :signed_in, only: [:edit, :update, :newpost]
   before_action :correct_user, only: [:edit, :update]
 
   # GET /users/1
@@ -43,7 +43,6 @@ class UsersController < ApplicationController
   end
 
 def newpost
-
   current_user.posts.create(:url=>params[:url], :user_id=>current_user.id, :score=>0)
         redirect_to :back
   end
