@@ -12,6 +12,11 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def addpost
+  current_user.posts.create(:url=>params[:url], :user_id=>current_user.id, :score=>0)
+        redirect_to root_url+"hoard/" + current_user.name
+  end
+
   # GET /users/1/edit
   def edit
   end
