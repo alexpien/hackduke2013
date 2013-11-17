@@ -3,7 +3,7 @@ Hackduke2013::Application.routes.draw do
 
 get "sessions/new", as: 'signin'
 
-post "users/newpost"
+post "stash/newpost"
 post "users/newstash"
 
 post "likes/stash"

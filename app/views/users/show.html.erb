@@ -11,8 +11,8 @@
 <% if current_user %>
 <% if current_user.name==@user.name %>
 <h2>
+    <%= render partial:"stash/stash_form" %>
   Your Stashes
-  <%= render partial:"stash/stash_form" %>
 </h2>
 <% end %>
 <% end %> 

@@ -25,36 +25,17 @@ class UsersController < ApplicationController
       end
   end
 
-def newpost
-  require 'mechanize'
-  stash=Stash.find(params[:stash][:id])
-  u = URI.parse(params[:url])
-
-  if(!u.scheme)
-    # prepend http:// and try again
-    params[:url].prepend("http://")
-      u = URI.parse(params[:url])
-  end
-if(%w{http https}.include?(u.scheme))
-  title=Mechanize.new.get(u.to_s).title
-      stash.posts.create(:url=>u.to_s, :title=>title)
-      flash[:notice]="Post added to stash!"
-      redirect_to :back
-else
-      flash[:notice]="Error reading URL!"
-      redirect_to :back
-end
-
-  end
-
 def newstash
-  current_user.stashes.create(:name=>params[:name], :user_id=>current_user.id, :score=>0)
+  stash=current_user.stashes.create(:name=>params[:name], :user_id=>current_user.id, :score=>0)
+         if stash.save
         flash[:notice]="Stash created!"
+      else
+          flash[:notice]="Error creating stash"
+      end
         redirect_to :back
 end
 
   private
-
     def set_user
       @user = User.find(params[:id])
     end
