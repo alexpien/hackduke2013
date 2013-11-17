@@ -1,8 +1,8 @@
 
 <div class="title-block"><h1><%=@stash.name%></h1> <span style="margin-left:5em">by <%=link_to User.find(@stash.user_id).name, user_path(@stash.user_id)%></span></div>
 
-<p class="lead text-muted"><%=@stash.comment%></p>
 
+<p class="lead text-muted"><%=@stash.comment%></p>
 <%if current_user%>
   <button type="button" class="btn btn-default editButton">Edit</button>
   <div class ="stashCommentEdit" style="display:none;">
