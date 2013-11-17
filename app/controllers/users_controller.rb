@@ -1,12 +1,12 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show]
   before_action :signed_in, only: [:edit, :update, :newpost]
   before_action :correct_user, only: [:edit, :update]
 
   # GET /users/1
   # GET /users/1.json
   def show
-        @posts= Post.where(user_id: @user.id)
+     @user = User.find(params[:id])
+    @stashes=Stash.where(user_id: @user.id)
   end
 
   # GET /users/new
@@ -51,10 +51,6 @@ def newpost
 def newstash
   current_user.stashes.create(:name=>params[:name], :user_id=>current_user.id, :score=>0)
         redirect_to :back
-end
-
-def set_user
- @user = User.find(params[:id])
 end
 
     def correct_user

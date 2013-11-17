@@ -16,24 +16,6 @@
 
 <h3>
   <strong>Your Stashes</strong>
+    <%= render partial:"stash/stash_form" %>
 </h3>
-
-<div class="row" style="margin-left:15px;"> <!-- YourStashes -->
-  <% @user.stashes.each do |stash| %>
-    <div class="col-xs-3">
-      <div class="thumbnail">
-        <a href="/stash/<%= stash.id%>">
-          <% if stash.posts.first %>
-         <img src="http://free.pagepeeker.com/v2/thumbs.php?size=m&url=<%=stash.posts.first.url%>" style="width:195px;"/>
-         <% end %>
-        </a>
-        <div class="caption">
-          <h3> <%= stash.name %> </h3>
-        </div>
-      </div>
-    </div>
-  <% end %>
-</div>
-<div>
-  <%= render partial:"stash/stash_form" %>
-</div>
+  <%= render partial:"shared/stash_display", locals:{stashes: @stashes} %>
