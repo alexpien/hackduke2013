@@ -38,3 +38,8 @@
 .back {
 	transform: rotateY(180deg);
 }
+
+ul{
+    list-style:none;
+
+}
