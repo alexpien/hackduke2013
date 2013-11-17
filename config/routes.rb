@@ -5,8 +5,10 @@ get "sessions/new", as: 'signin'
 
   resources :sessions 
 
-  resources :users
-  
+  resources :user
+  resources :post
+
+
   get 'hoard/:user' => 'hoard#index'  
 
   # The priority is based upon order of creation:
