@@ -5,27 +5,38 @@
   <title>PageShare</title>
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="author" content="Howard Chung, Kevin Jian, Alex Pien">
 
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+  <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
     <script src="../../assets/js/html5shiv.js"></script>
     <script src="../../assets/js/respond.min.js"></script>
   <![endif]-->
   <style>
-    .post{
-      text-align: center
+    .container {
+      max-width: none !important;
+      width: 970px;
     }
-    .articleimage{
-      width: 300px;
-      height: 300px;
+    .postimage{
+      width: 283px;
+      height: 200px;
     }
-    .articletitle{
+    .posttitle{
 
+    }
+    .postauthor{
+
+    }
+    .like{
+      /*visibility: hidden;*/
+      position: absolute;
+      top: 8px;
+      left: 22px;
     }
     footer{
       position: absolute;
@@ -34,7 +45,10 @@
       text-align: center;
     }
   </style>
-
+  <script>
+    function like(button) {
+    }
+  </script>
 </head>
 <body>
   <!-- Static navbar -->
@@ -78,7 +92,8 @@
     <hr>
     <p>&copy; HackDuke 2013</p>
   </footer>
-  <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
 </body>
+
 </html>
