@@ -46,6 +46,7 @@
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
+            <li><%= render partial:"post/post_form" %></li>
         <% if current_user.nil?%>
           <li><%= link_to "Sign in",signin_url%></li>
         <%else%>

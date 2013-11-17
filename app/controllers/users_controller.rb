@@ -44,11 +44,8 @@ class UsersController < ApplicationController
   end
 
 def newpost
-  response = Unirest::get "https://shepik-web-screenshot.p.mashape.com/screenshot.php?url="+params[:url], 
-  headers: { 
-    "X-Mashape-Authorization" => "o5n2eGH23P30YCgedWEoTOWL3ogGL2gM"
-  }
-  current_user.posts.create(:url=>params[:url], :user_id=>current_user.id, :score=>0, :image_path=>response.body["image"])
+
+  current_user.posts.create(:url=>params[:url], :user_id=>current_user.id, :score=>0)
         redirect_to :back
   end
 

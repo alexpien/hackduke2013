@@ -11,9 +11,9 @@
   <%= @user.email %>
 </h3>
 hihihi this is <%= @user.name %>'s hoard.
-<%= render partial:"post/post_form" %>
 <%=@posts.each do |post|%>
-
+<%=post.inspect%>
+<img src="http://free.pagepeeker.com/v2/thumbs.php?size=m&url=<%=post.url%>"/>
 <%end%>
 
 <p> <%= link_to 'Edit', edit_user_path(@user), {:class=>"btn btn-large btn-link"}  %></p>
