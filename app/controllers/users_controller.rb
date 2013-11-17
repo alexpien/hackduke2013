@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  require 'unirest'
   before_action :set_user, only: [:show]
   before_action :signed_in, only: [:edit, :update]
   before_action :correct_user, only: [:edit, :update]
@@ -43,7 +44,11 @@ class UsersController < ApplicationController
   end
 
 def newpost
-  current_user.posts.create(:url=>params[:url], :user_id=>current_user.id, :score=>0)
+  response = Unirest::get "https://shepik-web-screenshot.p.mashape.com/screenshot.php?url="+params[:url], 
+  headers: { 
+    "X-Mashape-Authorization" => "o5n2eGH23P30YCgedWEoTOWL3ogGL2gM"
+  }
+  current_user.posts.create(:url=>params[:url], :user_id=>current_user.id, :score=>0, :image_path=>response.body["image"])
         redirect_to :back
   end
 
