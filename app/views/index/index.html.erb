@@ -1,60 +1,70 @@
 <%=@users.inspect%>
 <br><br>
+
 <div class="container">
-    <div class="container">
+	<div id="recommended"> <!-- Top rated / favorites -->
+		<h1>Recommended for you</h1>
+	  	<div class="row">
+	    <div class="col-md-4">
+	    	<a href="http://books.google.com/books?id=R-q4fJB2iNsC&pg=PA55&lpg=PA55&dq=george+hw+bush+komodo+dragon&source=bl&ots=UKVxd7NG-D&sig=NwoOW4LkebnhbrEti-W4ulM4ETo&hl=en&sa=X&ei=f8qHUv_QHOKi2wWRk4CIAQ&ved=0CGkQ6AEwCg#v=onepage&q=george%20hw%20bush%20komodo%20dragon&f=false" class="thumbnail" style="top:0px;">
+	    		Article
+	    	</a>
+	      <h2>Title</h2>
+	      <p>Text</p>
+	      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+	    </div>
+	   	<div class="col-md-4">
+	      <h2>Title</h2>
+	      <p>Text</p>
+	      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+	    </div>	    
+	    <div class="col-md-4">
+	      <h2>Title</h2>
+	      <p>Text</p>
+	      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+	    </div>
+	  </div>
+	</div><!--/recommended-->
+	<div id="newsfeed"> <!-- Recent posts -->
+		<h1>Recent Posts</h1>
+		<p>Howard posted: </p>
+	  <div class="row">
+	    <div class="col-md-4">
+	      <h2>Title</h2>
+	      <p>Text</p>
+	      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+	    </div>
+	   	<div class="col-md-4">
+	      <h2>Title</h2>
+	      <p>Text</p>
+	      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+	    </div>	    
+	    <div class="col-md-4">
+	      <h2>Title</h2>
+	      <p>Text</p>
+	      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+	    </div>
+	  </div>
+	  <p>Pien posted: </p>
+	  <div class="row">
+	    <div class="col-md-4">
+	      <h2>Title</h2>
+	      <p>Text</p>
+	      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+	    </div>
+	   	<div class="col-md-4">
+	      <h2>Title</h2>
+	      <p>Text</p>
+	      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+	    </div>	    
+	    <div class="col-md-4">
+	      <h2>Title</h2>
+	      <p>Text</p>
+	      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+	    </div>
+	  </div>
+	</div><!--/newsfeed-->
 
-      <div class="row row-offcanvas row-offcanvas-right">
-
-        <div class="col-xs-12 col-sm-9">
-          <p class="pull-right visible-xs">
-            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-          </p>
-
-         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-          <p>Favorites</p>
-          <div class="list-group">
-            <a href="#" class="list-group-item active">Howard</a>
-            <a href="#" class="list-group-item">Kevin</a>
-            <a href="#" class="list-group-item">Pien</a>
-          </div>
-        </div><!--/span-->
-
-          <div class="row">
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="col-6 col-sm-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/span-->
-          </div><!--/row-->
-        </div><!--/span-->
-
-
-      </div><!--/row-->
   <hr>
 
   <footer>
