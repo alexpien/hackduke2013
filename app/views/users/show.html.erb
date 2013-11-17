@@ -20,7 +20,7 @@
 
 <div class="row" style="margin-left:15px;"> <!-- YourStashes -->
   <% @user.stashes.each do |stash| %>
-    <div class="col-sm-4 post">
+    <div class="col-sm-3 post">
       <div class="thumbnail">
         <a href="/stash/<%= stash.id%>">
          <img src="http://free.pagepeeker.com/v2/thumbs.php?size=m&url=<%=stash.first.url%>"/>
