@@ -43,7 +43,7 @@ class UsersController < ApplicationController
   end
 
 def newpost
-  stash=Stash.find(params[:stash_id])
+  stash=Stash.find(params[:stash])
   stash.posts.create(:url=>params[:url])
         redirect_to :back
   end
