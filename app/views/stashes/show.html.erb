@@ -10,9 +10,7 @@
 <% end %>
 <% end %>
 
-<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-  <div class="flipper">
-    <div class="front">
+    <div id="shown">
       <!-- front content -->
       <div class="title-block"><h1><%=@stash.name%></h1> <span style="margin-left:5em">by
           <%=link_to User.find(@stash.user_id).name,
@@ -22,12 +20,10 @@
       </div>
 
     </div>
-    <div class="back">
+    <div id="editmsg" style="display:none">
       <!-- back content -->
         <%= render partial:"stashes/stash_update" %>
-     
-    </div>
-  </div>
+
 </div>
 
 

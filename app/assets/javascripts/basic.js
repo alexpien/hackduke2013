@@ -11,9 +11,8 @@ $( document ).ready(function(){
 
     $("#edit").click(function(){
         console.log("hi");
-        $(".flipper").toggleClass("flipit");
-        $(".flip-container").toggleClass("flipper");
-        $(".flipper").toggleClass("flipit");
+        $("#shown").toggle(300);
+        $("#editmsg").toggle(300);
         
   
 
