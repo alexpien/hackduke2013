@@ -2,7 +2,8 @@
 <% if stashes.length==0%>
 <%=link_to "You don't have a stash!", user_path(current_user.id)%>
 <%else%>
-<%= form_tag("/users/newpost", :method => "post", :class=>"navbar-form navbar-right") do %>
+<%= form_tag("/stash/newpost", :method => "post", :class=>"navbar-form navbar-right") do %>
+<%=label_tag nil, "Quick-add post"%>
 <div class="form-group">
   <%= text_field_tag(:url, nil, {:placeholder=>"URL",:class=>"form-control"}) %>
 </div>

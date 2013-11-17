@@ -58,5 +58,9 @@ $( document ).ready(function(){
         
     });
 
+    $('.editButton').click(function() {
+        $('.stashCommentEdit').show();
+    });
+
 });
 
