@@ -34,9 +34,11 @@
           <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Following<b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Pien</a></li>
-                <li><a href="#">Howard</a></li>
-                <!-- <li class="divider"></li> -->
+                <div id="following">
+                  <li><a href="#">Pien</a></li>
+                  <li><a href="#">Howard</a></li>
+                  <!-- <li class="divider"></li> -->
+                </div>
               </ul>
             </li>
           <li><%=link_to current_user.name, user_path(current_user)%></li>
@@ -46,18 +48,17 @@
       </li>
       </ul>
     </div><!--/.nav-collapse -->
-</div>
-<div class="container">
-  <%= yield %>
-  <hr>
-  <footer>
-    <p>&copy; HackDuke 2013</p>
-  </footer>
-</div>
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  </div>
+
+  <div class="container">
+    <%= yield %>
+    <hr>
+    <footer>
+      <p>&copy; HackDuke 2013</p>
+    </footer>
+  </div><!--/container-->
+
+  <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>
