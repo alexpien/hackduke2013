@@ -20,7 +20,8 @@ New stash button
 
 <%=@posts.each do |post|%>
 <%=post.inspect%>
+<a href= "<%=post.url%>"/>
 <img src="http://free.pagepeeker.com/v2/thumbs.php?size=m&url=<%=post.url%>"/>
 <%end%>
-
+</a>
 <p> <%= link_to 'Edit', edit_user_path(@user), {:class=>"btn btn-large btn-link"}  %></p>
