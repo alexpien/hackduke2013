@@ -1,28 +1,33 @@
 <%=@users.inspect%>
 <%=@posts.inspect%>
 <br><br>
-<div class="container">
-	<div id="recommended"> <!-- Top rated / favorites -->
-		<h1>News Feed</h1>
-	  	<div class="row">
-		    <div class="col-md-4">
-		    	<a href="http://books.google.com/books?id=R-q4fJB2iNsC&pg=PA55&lpg=PA55&dq=george+hw+bush+komodo+dragon&source=bl&ots=UKVxd7NG-D&sig=NwoOW4LkebnhbrEti-W4ulM4ETo&hl=en&sa=X&ei=f8qHUv_QHOKi2wWRk4CIAQ&ved=0CGkQ6AEwCg#v=onepage&q=george%20hw%20bush%20komodo%20dragon&f=false" class="thumbnail" style="top:0px;">
-		    		<img src="http://books.google.com/books?id=R-q4fJB2iNsC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72gzFBykgtZSizKXYvS15CYy-X7w5GqNbprPBGPEgEw3ymInwXPqI8LShjva0h2o3KXyO3QjIcB4DUUooZFFoydygkeyBrxbjOW12Papq1oaFrnCrLx8oXIcCAj8oQrkcDOVxoh">
-		    		<h2>TIL something about GWB</h2>
-		    	</a>
-		    </div>
-		    <div class="col-md-4">
-		    	<a href="http://books.google.com/books?id=R-q4fJB2iNsC&pg=PA55&lpg=PA55&dq=george+hw+bush+komodo+dragon&source=bl&ots=UKVxd7NG-D&sig=NwoOW4LkebnhbrEti-W4ulM4ETo&hl=en&sa=X&ei=f8qHUv_QHOKi2wWRk4CIAQ&ved=0CGkQ6AEwCg#v=onepage&q=george%20hw%20bush%20komodo%20dragon&f=false" class="thumbnail" style="top:0px;">
-		    		<img src="http://books.google.com/books?id=R-q4fJB2iNsC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72gzFBykgtZSizKXYvS15CYy-X7w5GqNbprPBGPEgEw3ymInwXPqI8LShjva0h2o3KXyO3QjIcB4DUUooZFFoydygkeyBrxbjOW12Papq1oaFrnCrLx8oXIcCAj8oQrkcDOVxoh">
-		    		<h2>TIL something about GWB</h2>
-		    	</a>
-		    </div>
-		    <div class="col-md-4">
-		    	<a href="http://books.google.com/books?id=R-q4fJB2iNsC&pg=PA55&lpg=PA55&dq=george+hw+bush+komodo+dragon&source=bl&ots=UKVxd7NG-D&sig=NwoOW4LkebnhbrEti-W4ulM4ETo&hl=en&sa=X&ei=f8qHUv_QHOKi2wWRk4CIAQ&ved=0CGkQ6AEwCg#v=onepage&q=george%20hw%20bush%20komodo%20dragon&f=false" class="thumbnail" style="top:0px;">
-		    		<img src="http://books.google.com/books?id=R-q4fJB2iNsC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72gzFBykgtZSizKXYvS15CYy-X7w5GqNbprPBGPEgEw3ymInwXPqI8LShjva0h2o3KXyO3QjIcB4DUUooZFFoydygkeyBrxbjOW12Papq1oaFrnCrLx8oXIcCAj8oQrkcDOVxoh">
-		    		<h2>TIL something about GWB</h2>
-		    	</a>
-		    </div>
-		</div>
-	</div><!--/recommended-->
-</div> <!-- /container -->
+
+<div id="newsfeed"> <!-- Top rated / favorites -->
+	<h1>News Feed</h1>
+  	<div class="row">
+	    <div class="col-md-4 post">
+	    	<a class="thumbnail" href="http://books.google.com/books?id=R-q4fJB2iNsC&pg=PA55&lpg=PA55&dq=george+hw+bush+komodo+dragon&source=bl&ots=UKVxd7NG-D&sig=NwoOW4LkebnhbrEti-W4ulM4ETo&hl=en&sa=X&ei=f8qHUv_QHOKi2wWRk4CIAQ&ved=0CGkQ6AEwCg#v=onepage&q=george%20hw%20bush%20komodo%20dragon&f=false">
+	    		<img class="articleimage" src="http://books.google.com/books?id=R-q4fJB2iNsC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72gzFBykgtZSizKXYvS15CYy-X7w5GqNbprPBGPEgEw3ymInwXPqI8LShjva0h2o3KXyO3QjIcB4DUUooZFFoydygkeyBrxbjOW12Papq1oaFrnCrLx8oXIcCAj8oQrkcDOVxoh">
+	    		<div class="caption">
+	    			<h3 class="articletitle">George W Bush</h3>
+	    		</div>
+	    	</a>
+	    </div>
+	    <div class="col-md-4 post">
+	    	<a class="thumbnail" href="http://imgur.com/vySviWh">
+	    		<img class="articleimage" src="http://i.imgur.com/vySviWh.jpg">
+	    		<div class="caption">
+	    			<h3 class="articletitle">PS4 Controller</h3>
+	    		</div>
+	    	</a>
+	    </div>
+	    <div class="col-md-4 post">
+	    	<a class="thumbnail" href="http://imgur.com/3Dpx4Jk">
+	    		<img class="articleimage" src="http://i.imgur.com/3Dpx4Jk.jpg">
+	    		<div class="caption">
+	    			<h3 class="articletitle">Canadian</h3>
+	    		</div>
+	    	</a>
+	    </div>
+	</div>
+</div><!--/newsfeed-->

@@ -3,16 +3,35 @@
 <head>
   <meta charset="utf-8">
   <title>PageShare</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <meta name="description" content="">
   <meta name="author" content="">
+
   <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
     <script src="../../assets/js/html5shiv.js"></script>
     <script src="../../assets/js/respond.min.js"></script>
   <![endif]-->
+  <style>
+    .post{
+      height: 100px;
+    }
+    .articleimage{
+    }
+    .articletitle{
+
+    }
+    footer{
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 <!-- Static navbar -->
@@ -31,18 +50,16 @@
           <li><%= link_to "Sign in",signin_url%></li>
         <%else%>
           <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Following<b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <div id="following">
-                  <li><a href="#">Pien</a></li>
-                  <li><a href="#">Howard</a></li>
-                  <!-- <li class="divider"></li> -->
-                </div>
-              </ul>
-            </li>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Pien</a></li>
+              <li><a href="#">Howard</a></li>
+              <div id="following"></div>
+            </ul>
+          </li>
           <li><%=link_to current_user.name, user_path(current_user)%></li>
-       <li><%= link_to "Sign out",signout_url%></li>
-       <%end%>
+          <li><%= link_to "Sign out",signout_url%></li>
+        <%end%>
       </ul>
       </li>
       </ul>
@@ -51,12 +68,12 @@
 
   <div class="container">
     <%= yield %>
-    <hr>
-    <footer>
-      <p>&copy; HackDuke 2013</p>
-    </footer>
   </div><!--/container-->
 
+    <footer>
+      <hr>
+      <p>&copy; HackDuke 2013</p>
+    </footer>
   <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 </body>

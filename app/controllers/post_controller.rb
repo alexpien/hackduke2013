@@ -1,9 +1,9 @@
 class PostController < ApplicationController
   def create
+        post_params[:user_id]=current_user.id
   	post=Post.new(post_params)
         post.save
-
-        return redirect_to "hoard/" + current_user.to_s
+        render :nothing=>true
   end
 
   def post_params
