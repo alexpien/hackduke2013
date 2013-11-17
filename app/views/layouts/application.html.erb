@@ -51,9 +51,9 @@
       </button>
       <%=link_to "stash", root_url, :class=>"navbar-brand"%>
     </div>
+
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "recent","/recent"%></li>
         <%if current_user.nil?%>
           <li><%= link_to "Sign in",signin_url%></li>
         <%else%>
@@ -61,7 +61,7 @@
           <li><%=link_to current_user.name, user_path(current_user)%></li>
           <li><%= link_to "Sign out",signout_url%></li>
         <%end%>
-        
+
       </ul>
     </div><!--/.nav-collapse -->
   </div>
@@ -80,6 +80,13 @@
 
   <footer>
 <a class="coinbase-button" data-code="6f165d760fbf055c8d3ac3bf35a694a8" data-button-style="donation_large" href="https://coinbase.com/checkouts/6f165d760fbf055c8d3ac3bf35a694a8">Donate Bitcoins</a><script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
+
+ <%= form_tag "/stashes/search", :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
 </footer>
 
 </body>

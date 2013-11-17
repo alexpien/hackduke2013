@@ -3,6 +3,10 @@ class StashesController < ApplicationController
     @stash = Stash.find(params[:id])    
   end
 
+  def search
+  @results = Stash.search(params[:search])
+end
+
 def create
   @stash=current_user.stashes.create(:name=>params[:stash][:name], :user_id=>current_user.id, :score=>0, :comment=>"Edit to add a description.")
       if @stash.save

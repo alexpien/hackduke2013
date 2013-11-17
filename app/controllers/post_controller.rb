@@ -26,5 +26,4 @@ class PostController < ApplicationController
     
   end
 
-
 end

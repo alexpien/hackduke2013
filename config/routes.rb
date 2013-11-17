@@ -6,6 +6,8 @@ get "sessions/new", as: 'signin'
 post "likes/stash"
 post "stashes/newpost"
 
+get "stashes/search"
+
   resources :sessions 
   resources :users
   resources :stashes
