@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @stashes=Stash.where(user_id: @user.id)
+    @stashes=Stash.where(user_id: @user.id).reverse_order
   end
 
   # GET /users/new

@@ -1,4 +1,5 @@
-<h1><%=@stash.name%></h1>by <%=link_to User.find(@stash.user_id).name, user_path(@stash.user_id)%>
+
+<div class="title-block"><h1><%=@stash.name%></h1> <span style="margin-left:5em">by <%=link_to User.find(@stash.user_id).name, user_path(@stash.user_id)%></span></div>
 
 <p class="lead text-muted"><%=@stash.comment%></p>
 <%= render partial:"stash/stash_update" %>
