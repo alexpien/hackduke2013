@@ -8,6 +8,15 @@
   <strong>email:</strong>
   <%= @user.email %>
 </h3>
+
+<h3>
+  <strong>score:</strong>
+  <%= @user.stashes.sum(:score) %>
+</h3>
+<br>
+<br>
+<br>
+
 <% if current_user %>
 <% if current_user.name==@user.name %>
 <h2>
