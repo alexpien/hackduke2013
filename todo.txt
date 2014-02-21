@@ -1,0 +1,22 @@
+﻿Stash, shareable collections of links
+TODO items below
+Design
+each user can create multiple stashes of links
+Stashes can be liked by users, which raises its score.
+Frontpage displays stashes with highest score
+
+
+Bugs
+favorite stashes from their pages
+can’t link things that are too long
+can’t directly link photos
+invalid password appears twice
+can’t add stashes to stashes (mechanize problem)
+
+
+Enhancements:
+display post date
+sort stashes by post date
+add page for favorited stashes
+Allow export of a stash
+Share stash on fb/twitter
